@@ -1,0 +1,92 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #eef6f9;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.game-container {
+  background: #fff;
+  padding: 30px 50px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+#instruction {
+  font-size: 1.3em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.button-group button {
+  padding: 15px 30px;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 8px;
+  margin: 10px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.green {
+  background-color: #4caf50;
+  color: white;
+}
+
+.red {
+  background-color: #f44336;
+  color: white;
+  visibility: hidden;
+}
+
+.feedback {
+  margin-top: 20px;
+  font-size: 1.1em;
+  color: #444;
+}
+
+.score {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #222;
+  font-size: 1.2em;
+}
+
+/* Shake animation on wrong action */
+.shake {
+  animation: shake 0.4s;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px); }
+  25% { transform: translate(-1px, -2px); }
+  50% { transform: translate(-3px, 1px); }
+  75% { transform: translate(3px, 2px); }
+  100% { transform: translate(1px, -1px); }
+}
+
+/* Blinking temptation */
+.blink {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0.3; }
+  100% { opacity: 1; }
+}
+
+/* Move temptation button */
+.move {
+  animation: move 2s infinite alternate;
+}
+
+@keyframes move {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(20px); }
+}
